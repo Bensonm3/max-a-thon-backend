@@ -6,7 +6,7 @@ let dbConfig = require('./database/db');
 
 
 // Express Route
-const athleteRoute = require('../backend/routes/athlete.route')
+const athleteRoute = require('./routes/athlete.route')
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -28,10 +28,10 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use('/athletes', athleteRoute)
 
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
     
-    app.get('/', function (req, res) {
-      res.sendFile(path.join(__dirname, 'build', 'index.html'));
+//     app.get('/', function (req, res) {
+//       res.sendFile(path.join(__dirname, 'build', 'index.html'));
 
 
 // PORT
