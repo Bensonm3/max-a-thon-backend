@@ -39,6 +39,7 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
+.then(res.send(`<h1>2021 Max Server</h1>`)))
 
 // 404 Error
 app.use((req, res, next) => {
