@@ -6,7 +6,7 @@ let dbConfig = require('./database/db');
 
 
 // Express Route
-const athleteRoute = require('./routes/athlete.route')
+const postRoute = require('./routes/post.route')
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use('/athletes', athleteRoute)
+app.use('/posts', postRoute)
 
 // app.use(express.static(path.join(__dirname, 'build')));
     
